@@ -1,0 +1,26 @@
+﻿@model Sistema_Parcial_Nomina.Models.Extras.CalculadorFacade
+
+@{
+    ViewBag.Title = "Sumadora";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Calculadora</h2>
+<form class="form-control-static" action="resultadocalculadora">
+
+    <label for="valor1">Primer numero a calcular</label>
+    <input type="number" name="valor1" class="form-control" />
+    <label for="valor1">Segundo numero a calcular</label>
+    <input type="number" name="valor2" class="form-control" />
+    <br />
+    <b>Operaciones</b>
+    <br/>
+    <div>
+
+    <button name="operacion" value="suma" class="btn btn-default">Sumar</button>
+    <button name="operacion" value="resta" class="btn btn-default">Restar</button>
+    <button name="operacion" value="multiplica" class="btn btn-default">Multiplicar</button>
+    <button name="operacion" value="divide" class="btn btn-default">Dividir</button>
+    </div>
+</form>
+

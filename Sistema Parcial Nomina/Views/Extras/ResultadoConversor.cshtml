@@ -1,0 +1,44 @@
+﻿@model Sistema_Parcial_Nomina.Models.Extras.ConversorFacade
+
+@{
+    ViewBag.Title = "ResultadoConversor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ResultadoConversor</h2>
+
+<h3>
+
+@if (Model.conv == "Converir Temperatura")
+{
+    <strong>
+        El Resultado es:  @Model.resultado Grados @if( @Model.temp == "fahrenheit")
+        {
+            <span>Celcius</span>
+        }
+        else
+        {
+    <span>Fahrenheit</span>
+        }
+    </strong>
+}
+
+@if (Model.conv == "Converir Divisa")
+{
+    <strong>
+        El Resultado es:  @Model.resultado @if(Model.div == "dop")
+        {
+            <span>USD</span>
+        }else { <span>DOP</span>}
+    </strong>
+}
+
+</h3>
+
+
+
+<hr />
+<div>
+
+    @Html.ActionLink("Volver", "Conversor", null, new { @class = "btn btn-default" })
+</div>

@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        :root {
+            --colorFontSide: whitesmoke;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            display: flex;
+        }
+        .buildBy {
+            text-decoration: none !important;
+            color: black;
+        }
+        .sider {
+            border-right: 1px solid black;
+            height: 100vh;
+            background-color: #333;
+            color: whitesmoke;
+            min-width: min-content;
+            padding-top: 15px;
+        }
+        .sider li {
+            list-style: none;
+            color: var(--colorFontSide) !important
+        }
+        a {
+            color: inherit;
+            text-decoration: none !important;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    class="navbar navbar-inverse navbar-fixed-top"
+        class="navbar-header"
+        div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+    -->
+    <main>
+
+        <div class="col-md-1 sider">
+            <div class="">
+                <span>Sistema de Nomina</span>
+                <ul class="">
+                    <li>@Html.ActionLink("Nomina", "Index", "Nominas")</li>
+                    <li>@Html.ActionLink("Empleados", "Index", "Empleados")</li>
+                </ul>
+                <span>Extras</span>
+                <ul>
+                    <li>@Html.ActionLink("Calculadora", "Sumadora", "Extras")</li>
+                    <li>@Html.ActionLink("Conversor de Unidades", "Conversor", "Extras")</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-xl-12 container">
+            
+            @RenderBody()
+            
+            <hr/>
+    <footer class="container">
+        <p>&copy; @DateTime.Now.Year - <a href="https://emiliort.com" target="_blank" class="buildBy">Emilio Rosa</a></p>
+    </footer>
+        </div>
+    </main>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

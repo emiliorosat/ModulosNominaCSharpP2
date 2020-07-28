@@ -1,0 +1,1 @@
+select * from Empleados where Estado = 1

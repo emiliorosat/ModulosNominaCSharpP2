@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Conversor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Conversor de unidades</h2>
+
+<div style="margin-top: 3rem">
+
+    <h3>Temperatura</h3>
+    <form class="form-control-static" action="ResultadoConversor">
+    <div class="form-group">
+
+        <input name="valor" type="number" class="form-control" />
+        <label class="checkbox-inline">
+            Fahrenheit
+            <input type="radio" name="temp" value="fahrenheit" checked />
+        </label>
+        <label class="checkbox-inline">
+            Celcius
+            <input type="radio" name="temp" value="celcius" />
+        </label>
+    </div>
+        <input type="submit" name="conv" value="Converir Temperatura" class="btn btn-success" />
+    </form>
+        <hr />
+
+        <h3>Divisas</h3>
+        <form class="form-control-static" action="ResultadoConversor">
+            <div class="form-group">
+
+                <input name="valor" type="number" class="form-control" />
+                <label class="checkbox-inline">
+                    Peso Dominicano
+                    <input type="radio" name="div" value="dop" checked />
+                </label>
+                <label class="checkbox-inline">
+                    Dollar Estado Unidense
+                    <input type="radio" name="div" value="usd" />
+                </label>
+            </div>
+            <input type="submit" name="conv" value="Converir Divisa" class="btn btn-info" />
+        </form>
+
+    </div>
